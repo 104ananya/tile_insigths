@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tile',
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './tile.component.css'
 })
 export class TileComponent {
-
+  @Input() isSelected: boolean = false;
 }

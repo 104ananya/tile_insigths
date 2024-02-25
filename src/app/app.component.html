@@ -4,10 +4,22 @@
 3. UPLOADED VIDEO THUMBNAIL
 4. VIDEO INSIGHTS - VIDEO TITLE, VIDEO LINK, VIDEO STATS, VIDEO DESCRIPTION, VIDEO COMMENT -->
 
-<div class="mx-5">
+<main class="mx-5 bg-blueGray-200">
 
   <app-navbar></app-navbar>
   <app-profile></app-profile>
-  <app-tile></app-tile>
-  <app-insights></app-insights>
-</div>
+
+  <div class=" pb-8" [class.shrink-section]="selectedTile !== null">
+    <p class="text-4xl text-center py-8">YouTube Video Insight</p>
+    <div class="tile-section flex flex-wrap justify-center">
+      <app-tile [isSelected]="selectedTile === 1" (click)="toggleTile(1)" class="cursor-pointer"></app-tile>
+      <app-tile></app-tile>
+      <app-tile></app-tile>
+      <app-tile></app-tile>
+      <app-tile></app-tile>
+      <app-tile></app-tile>
+    </div>
+  </div>
+
+  <app-insights *ngIf="selectedTile !== null"></app-insights>
+</main>
