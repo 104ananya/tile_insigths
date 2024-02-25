@@ -23,7 +23,8 @@
         (click)="toggleTile(tile.index)" 
         [thumbnail]="tile.thumbnail" 
         [title]="tile.title" 
-        class="cursor-pointer">
+        class="cursor-pointer"
+        [class.opacity-reduced]="selectedTile !== null && selectedTile !== tile.index">
       </app-tile>
     </div>
   </div>
