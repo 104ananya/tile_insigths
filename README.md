@@ -1,5 +1,5 @@
 # Overview
-![Alt Text](src\assets\img\web.gif)
+<img align="center"  src="https://github.com/104ananya/104ananya/blob/main/Pikachu.gif"  />
 
 
 # TileInsigths
