@@ -9,4 +9,6 @@ import { Component, Input } from '@angular/core';
 })
 export class TileComponent {
   @Input() isSelected: boolean = false;
+  @Input() thumbnail!: string;
+  @Input() title!: string;
 }

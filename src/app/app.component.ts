@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
+
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { TileComponent } from './components/tile/tile.component';
 import { InsightsComponent } from './components/insights/insights.component';
+
+import { tilesData } from './data';
 
 
 @Component({
@@ -23,4 +26,6 @@ export class AppComponent {
     // Toggle the selected state of the clicked tile
     this.selectedTile = this.selectedTile === tileNumber ? null : tileNumber;
   }
+
+  tilesData = tilesData;
 }
