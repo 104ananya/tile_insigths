@@ -1,8 +1,8 @@
-<div class="grid grid-cols-2 gap-4 bg-gray-400">
+<div class="grid grid-cols-2 gap-4">
     <!-- First column: YouTube video -->
     <div class="border p-4">
         <!-- YouTube video here -->
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0"
+        <iframe width="100%" height="315" [src]="getSafeUrl(videoUrl)" frameborder="0"
             allowfullscreen></iframe>
     </div>
 
@@ -10,28 +10,28 @@
     <div class="border p-4">
         <!-- Video name and channel name -->
         <p class="font-bold my-2">Video Name:</p>
-        <p>Video Title Here</p>
+        <p>{{videoName}}</p>
         <p class="font-bold my-2">Channel:</p>
-        <p>Channel Name Here</p>
+        <p>{{channelName}}</p>
 
 
         <!-- Second row: Insights details -->
         <div class="grid grid-cols-2 gap-4 mt-4">
             <div>
                 <p class="font-bold">Views:</p>
-                <p>1,000</p>
+                <p>{{views}}</p>
             </div>
             <div>
                 <p class="font-bold">Likes:</p>
-                <p>500</p>
+                <p>{{likes}}</p>
             </div>
             <div>
                 <p class="font-bold">Engagement:</p>
-                <p>50%</p>
+                <p>{{engagement}}</p>
             </div>
             <div>
                 <p class="font-bold">Comments:</p>
-                <p>100</p>
+                <p>{{comments}}</p>
             </div>
         </div>
     </div>

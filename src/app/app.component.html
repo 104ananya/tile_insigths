@@ -28,5 +28,13 @@
     </div>
   </div>
 
-  <app-insights *ngIf="selectedTile !== null"></app-insights>
+  <app-insights *ngIf="selectedTile !== null && insightsData[selectedTile - 1]"
+    [videoName]="insightsData[selectedTile - 1].videoName || ''"
+    [channelName]="insightsData[selectedTile - 1].channelName || ''"
+    [views]="insightsData[selectedTile - 1].views || ''" 
+    [likes]="insightsData[selectedTile - 1].likes || 0"
+    [engagement]="insightsData[selectedTile - 1].engagement || 0"
+    [comments]="insightsData[selectedTile - 1].comments || 0"
+    [videoUrl]="insightsData[selectedTile - 1].videoUrl || ''"
+    ></app-insights>
 </main>

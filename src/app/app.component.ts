@@ -7,7 +7,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { TileComponent } from './components/tile/tile.component';
 import { InsightsComponent } from './components/insights/insights.component';
 
-import { tilesData } from './data';
+import { tilesData, insightsData } from './data';
 
 
 @Component({
@@ -23,9 +23,18 @@ export class AppComponent {
   selectedTile: number | null = null;
 
   toggleTile(tileNumber: number): void {
-    // Toggle the selected state of the clicked tile
-    this.selectedTile = this.selectedTile === tileNumber ? null : tileNumber;
+    // If the clicked tile is already selected, deselect it
+    if (this.selectedTile === tileNumber) {
+      this.selectedTile = null;
+    } else {
+      // Else, select the clicked tile
+      this.selectedTile = tileNumber;
+    }
   }
 
   tilesData = tilesData;
+  
+  insightsData = insightsData;
+
+  
 }
