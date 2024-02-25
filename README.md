@@ -1,5 +1,5 @@
 # Overview
-<img align="center"  src="https://github.com/104ananya/104ananya/blob/main/Pikachu.gif"  />
+<img align="center"  src="https://github.com/104ananya/tile_insigths/blob/master/src/assets/img/web.gif"  />
 
 
 # TileInsigths
